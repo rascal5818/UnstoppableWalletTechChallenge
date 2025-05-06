@@ -3156,6 +3156,7 @@
 		D3F9B0382BE3B5AA009FFA95 /* WalletConnectSendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9B0362BE3B5AA009FFA95 /* WalletConnectSendView.swift */; };
 		D3F9B03A2BE3BB36009FFA95 /* WalletConnectSendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9B0392BE3BB36009FFA95 /* WalletConnectSendViewModel.swift */; };
 		D3F9B03B2BE3BB36009FFA95 /* WalletConnectSendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9B0392BE3BB36009FFA95 /* WalletConnectSendViewModel.swift */; };
+		F34F70722DC8CED0004436FC /* UXCam in Frameworks */ = {isa = PBXBuildFile; productRef = F34F70712DC8CED0004436FC /* UXCam */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -4811,6 +4812,7 @@
 				D36287C82CA3DF7A00ADAF3B /* TonConnectAPI in Frameworks */,
 				D3604E8C28F03DBF0066C366 /* BitcoinCashKit in Frameworks */,
 				D3993DC428F429AA008720FB /* UnstoppableDomainsResolution in Frameworks */,
+				F34F70722DC8CED0004436FC /* UXCam in Frameworks */,
 				D023D2652A24B9DC004F65B0 /* TronKit in Frameworks */,
 				D3C187BC2907CFC200FE1900 /* Checkpoints in Frameworks */,
 				D3AF5A9329FFD87500C1399E /* RxSwift in Frameworks */,
@@ -9020,6 +9022,7 @@
 				6BBCE4A22BDA419200ABBD55 /* Web3Wallet */,
 				6BDDB59B2C1816B500DE9D56 /* TonKit */,
 				D36287C72CA3DF7A00ADAF3B /* TonConnectAPI */,
+				F34F70712DC8CED0004436FC /* UXCam */,
 			);
 			productName = Wallet;
 			productReference = D38405CE218317DF007D50AD /* Unstoppable D.app */;
@@ -9251,6 +9254,7 @@
 				6BF66DD82BA1A73300963242 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				6BDDB59F2C1AC73200DE9D56 /* XCRemoteSwiftPackageReference "TonKit" */,
 				D36287C62CA3DF7A00ADAF3B /* XCLocalSwiftPackageReference "TonConnectAPI" */,
+				F34F70702DC8CECF004436FC /* XCRemoteSwiftPackageReference "uxcam-ios-sdk" */,
 			);
 			productRefGroup = D3285F4320BD158E00644076 /* Products */;
 			projectDirPath = "";
@@ -13397,6 +13401,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		F34F70702DC8CECF004436FC /* XCRemoteSwiftPackageReference "uxcam-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uxcam/uxcam-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.6.24;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -13806,6 +13818,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3E323C62AE7B8E400F73914 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		F34F70712DC8CED0004436FC /* UXCam */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34F70702DC8CECF004436FC /* XCRemoteSwiftPackageReference "uxcam-ios-sdk" */;
+			productName = UXCam;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

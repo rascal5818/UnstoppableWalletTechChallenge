@@ -2,6 +2,7 @@ import ComponentKit
 import SnapKit
 import ThemeKit
 import UIKit
+import UXCam
 
 class WelcomeScreenViewController: ThemeViewController {
     private let viewModel: WelcomeScreenViewModel
@@ -203,6 +204,11 @@ class WelcomeScreenViewController: ThemeViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        UXCam.tagScreenName("Welcome Screen")
+        UXCam.logEvent("Welcome Screen Properties and Status",withProperties: [
+            "screens": 3,
+            "loaded": "true"
+        ])
 
         UIView.animate(withDuration: 0.5, delay: 0.5, animations: { [weak self] in
             self?.logoView.alpha = 1

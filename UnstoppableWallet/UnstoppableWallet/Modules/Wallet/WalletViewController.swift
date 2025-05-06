@@ -9,6 +9,7 @@ import SectionsTableView
 import SwiftUI
 import ThemeKit
 import UIKit
+import UXCam
 
 class WalletViewController: ThemeViewController {
     private let animationDuration: TimeInterval = 0.2
@@ -193,6 +194,8 @@ class WalletViewController: ThemeViewController {
 
         viewModel.onAppear()
         showBackupPromptIfRequired()
+        UXCam.tagScreenName("Wallet View Screen")
+        UXCam.logEvent("Entered Wallet View")
     }
 
     override func viewWillDisappear(_ animated: Bool) {

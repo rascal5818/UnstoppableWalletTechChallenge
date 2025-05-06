@@ -1,5 +1,6 @@
 import ThemeKit
 import UIKit
+import UXCam
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,6 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = ThemeWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
+        // Initialize UXCam
+        let config = UXCamConfiguration(appKey: "9y8wuh4ok1emlbv")
+        config.enableAutomaticScreenNameTagging = true
+        UXCam.optIntoSchematicRecordings()
+        UXCam.start(with: config)
+        print("UXCam initialized")
+        UXCam.setUserIdentity("Reis Caffrey")
+        UXCam.setUserProperty("age", value: "32")
+        UXCam.setUserProperty("dob", value: "01-01-1970")
+        UXCam.setUserProperty("gender", value: "male")
+        UXCam.setUserProperty("language", value: "eng")
+        UXCam.setUserProperty("role", value: "user")
 
         do {
             try App.initApp()

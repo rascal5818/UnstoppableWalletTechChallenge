@@ -5,6 +5,7 @@ import SectionsTableView
 import SnapKit
 import ThemeKit
 import UIKit
+import UXCam
 
 class ManageAccountsViewController: ThemeViewController {
     private let viewModel: ManageAccountsViewModel
@@ -100,6 +101,10 @@ class ManageAccountsViewController: ThemeViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.deselectCell(withCoordinator: transitionCoordinator, animated: animated)
+        let overlay = UXCamOverlaySetting(color: .yellow)
+        UXCam.applyOcclusion(overlay)
+        UXCam.tagScreenName("Manage Wallets Screen")
+        UXCam.logEvent("Entered Manage Wallets")
     }
 
     @objc private func onTapDoneButton() {
@@ -267,5 +272,11 @@ extension ManageAccountsViewController: SectionsDataSource {
                 ]
             ),
         ]
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        UXCam.removeOcclusion(of: .overlay)
+        UXCam.logEvent("Exited Manage Wallets")
+        super.viewWillDisappear(animated)
     }
 }

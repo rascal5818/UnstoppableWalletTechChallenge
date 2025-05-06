@@ -7,6 +7,7 @@ import SectionsTableView
 import SnapKit
 import ThemeKit
 import UIKit
+import UXCam
 
 class ManageWalletsViewController: ThemeSearchViewController {
     private let viewModel: ManageWalletsViewModel
@@ -99,6 +100,7 @@ class ManageWalletsViewController: ThemeSearchViewController {
         present(module, animated: true)
 
         stat(page: .coinManager, event: .open(page: .addToken))
+        UXCam.logEvent("Tapped Add Token")
     }
 
     private func onUpdate(viewItems: [ManageWalletsViewModel.ViewItem]) {
