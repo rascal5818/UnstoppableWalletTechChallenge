@@ -32,3 +32,10 @@ You can use sample configurations in `.template.xcconfig` files.
 ## License
 
 This wallet is open source and available under the terms of the MIT License.
+
+## UXCam demo
+
+1. Manage Wallet screen is occluded
+2. Main app screens are tagged e.g. Welcome Screen
+3. Event added when you tap "Add Token"
+4. Custom user properties are visible in UXCam Dashboard
